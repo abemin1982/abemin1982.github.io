@@ -1,44 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>ポートフォリオ | Webデザイナー</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ポートフォリオ</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Webデザイナー Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div id="loading">Loading...</div>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>こんにちは。Webデザイナーの〇〇です。UI/UXに配慮したデザインを得意としています。</p>
-    </section>
+  <nav id="nav">
+    <ul>
+      <li><a href="#about">自己紹介</a></li>
+      <li><a href="#works">作品</a></li>
+      <li><a href="#contact">連絡先</a></li>
+    </ul>
+  </nav>
 
-    <section id="works">
-        <h2>Works</h2>
-        <div class="work">作品1</div>
-        <div class="work">作品2</div>
-        <div class="work">作品3</div>
-    </section>
+  <section id="about" class="fade-in">こんにちは！私はWeb制作者の安部一也です。</section>
+  <section id="works" class="fade-in">
+    <h2>制作実績</h2>
+    <p>ここにポートフォリオのサムネイルや紹介を並べましょう。</p>
+  </section>
+  <section id="contact" class="fade-in">
+    <h2>お問い合わせ</h2>
+    <p>abemin1982@example.com</p>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>ご依頼・お問い合わせは以下のメールアドレスまでご連絡ください。</p>
-        <p>example@example.com</p>
-    </section>
+  <div id="to-top">↑</div>
 
-    <footer>
-        <p>&copy; 2025 Web Designer</p>
-    </footer>
+  <script src="main.js"></script>
 </body>
 </html>
