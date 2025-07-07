@@ -20,7 +20,7 @@ header {
   z-index: 999;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   overflow-x: hidden;
-  overflow-y: visible; /* ← 追加 */
+  overflow-y: visible; /* 追加 */
 }
 
 nav {
@@ -31,7 +31,7 @@ nav {
   position: relative;
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: visible; /* ← 追加 */
+  overflow-y: visible; /* 追加 */
   min-height: 60px;
 }
 
@@ -46,7 +46,7 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: visible; /* ← 追加 */
+  overflow-y: visible; /* 追加 */
 }
 
 nav a {
@@ -62,12 +62,12 @@ nav a.active {
 
 #active-line {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   height: 2px;
   width: 0;
   background: #111;
   transition: 0.3s ease;
-  top: 100%;  /* ここを追加します */
+  top: auto; /* topはJSで制御 */
 }
 
 /* ヒーローセクション（泡の背景） */
@@ -178,43 +178,4 @@ footer {
   background: #111;
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.back-btn:hover {
-  background: #444;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-  nav {
-    padding: 10px 15px;
-  }
-
-  nav ul {
-    gap: 12px;
-  }
-
-  .gallery {
-    gap: 10px;
-    padding: 0 10px;
-  }
-
-  .work {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  section {
-    padding: 80px 10px 40px;
-    max-width: 100%;
-  }
-}
-
-/* メディア要素の共通スタイル（横はみ出し防止） */
-iframe, img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+  border-radi
