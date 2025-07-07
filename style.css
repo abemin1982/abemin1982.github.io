@@ -130,3 +130,25 @@ footer {
 .back-btn:hover {
   background: #444;
 }
+
+@media (max-width: 600px) {
+  .gallery {
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .work {
+    flex: 1 1 100%; /* 幅100%にしてはみ出し防止 */
+    max-width: 100%;
+  }
+  section {
+    padding: 80px 10px 40px; /* 画面に合わせて余白調整 */
+    max-width: 100%;
+  }
+  nav {
+    padding: 15px 20px;
+  }
+  nav ul {
+    gap: 12px;
+  }
+}
+
