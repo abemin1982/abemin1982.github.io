@@ -1,1 +1,1 @@
-/* dummy aos.js */
+/* dummy AOS JS */
