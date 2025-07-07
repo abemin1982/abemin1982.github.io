@@ -183,3 +183,17 @@ body {
     max-width: 100%;
   }
 }
+
+body {
+  overflow-x: hidden;
+}
+
+iframe, img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section, .detail, .gallery, .work {
+  box-sizing: border-box;
+}
