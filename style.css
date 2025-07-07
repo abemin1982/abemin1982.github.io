@@ -229,4 +229,8 @@ iframe, img, video {
   display: block;
 }
 
+h1 {
+  font-size: 2em;
+}
+
 
