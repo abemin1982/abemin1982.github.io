@@ -11,10 +11,10 @@ function resizeCanvas() {
 function Bubble() {
   this.x = Math.random() * canvas.width;
   this.y = Math.random() * canvas.height;
-  this.radius = Math.random() * 10 + 4;
-  this.speed = Math.random() * 1 + 0.5;
-  this.alpha = Math.random() * 0.5 + 0.3;
-  this.direction = Math.random() > 0.5 ? "up" : "down"; // ← 上or下に動く
+  this.radius = Math.random() * 20 + 4; // ← 大きさ：4〜24px
+  this.speed = Math.random() * 0.4 + 0.1; // ← 超ゆっくり：0.1〜0.5
+  this.alpha = Math.random() * 0.4 + 0.2;
+  this.direction = Math.random() > 0.5 ? "up" : "down";
 }
 
 function draw() {
@@ -25,7 +25,6 @@ function draw() {
     ctx.fillStyle = `rgba(255,255,255,${b.alpha})`;
     ctx.fill();
 
-    // 動かす方向によって上下に移動
     if (b.direction === "up") {
       b.y -= b.speed;
       if (b.y + b.radius < 0) {
