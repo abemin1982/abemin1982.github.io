@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>安部 一也 | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="libs/aos/aos.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
   <header id="header">
@@ -17,11 +17,12 @@
         <li><a href="#works">Works</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div id="active-line"></div>
     </nav>
   </header>
 
-  <section class="hero" data-aos="zoom-in">
-    <div class="overlay"></div>
+  <section class="hero">
+    <canvas id="bubbles"></canvas>
     <div class="hero-text">
       <h1>安部 一也</h1>
       <p>Kazuya Abe - Web Designer / Creator</p>
@@ -31,10 +32,10 @@
   <section id="about" data-aos="fade-up">
     <h2>About</h2>
     <p>
-      初めまして、ご覧いただきありがとうございます。安部と申します。<br>
-      20代からWEBデザインの勉強をし、cssがまだ指定して呼び出せない頃から、現在主流のhtml5まで携わってきました。<br>
-      主にphotoshopでサムネイルやバナー、その他画像制作を行い、illustrator等で名刺～ポスターまで幅広くデザインが可能です。<br>
-      コーディングも可能、JavaScript等はAIと共に作業効率をあげて構築ができます。<br>
+      初めまして、ご覧いただきありがとうございます。安部と申します。<br />
+      20代からWEBデザインの勉強をし、cssがまだ指定して呼び出せない頃から、現在主流のhtml5まで携わってきました。<br />
+      主にphotoshopでサムネイルやバナー、その他画像制作を行い、illustrator等で名刺～ポスターまで幅広くデザインが可能です。<br />
+      コーディングも可能、JavaScript等はAIと共に作業効率をあげて構築ができます。<br />
       少々WEBデザインから離れ、ECサイトの運営、主に商品の在庫管理等をメインに活動してました。
     </p>
   </section>
@@ -42,11 +43,13 @@
   <section id="works" data-aos="fade-up">
     <h2>Works</h2>
     <div class="gallery">
-      <a href="works/work1.html" class="work" data-aos="flip-left">
-        <img src="assets/work1.jpg" alt="work1"><p>Sample Work 1</p>
+      <a href="works.html?id=1" class="work">
+        <img src="assets/work1.jpg" alt="work1" />
+        <p>Sample Work 1</p>
       </a>
-      <a href="works/work2.html" class="work" data-aos="flip-right">
-        <img src="assets/work2.jpg" alt="work2"><p>Sample Work 2</p>
+      <a href="works.html?id=2" class="work">
+        <img src="assets/work2.jpg" alt="work2" />
+        <p>Sample Work 2</p>
       </a>
     </div>
   </section>
@@ -54,17 +57,15 @@
   <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <form action="https://formspree.io/f/moqzjvve" method="POST" class="contact-form">
-      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Kazuya Abe</p>
-  </footer>
+  <footer><p>&copy; 2025 Kazuya Abe</p></footer>
 
-  <script src="libs/aos/aos.js"></script>
   <script src="script.js"></script>
+  <script src="bubble.js"></script>
 </body>
 </html>

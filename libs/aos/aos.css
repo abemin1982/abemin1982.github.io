@@ -1,1 +1,7 @@
-/* dummy AOS CSS */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
