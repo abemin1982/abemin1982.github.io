@@ -84,6 +84,7 @@ nav a.active {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  width: 100%;
 }
 
 canvas#bubbles {
