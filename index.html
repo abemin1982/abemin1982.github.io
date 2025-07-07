@@ -2,16 +2,17 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>安部 一也 | Web Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="libs/aos/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="libs/aos/aos.css">
 </head>
 <body>
   <header>
     <nav>
+      <div class="logo">KAZUYA ABE</div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#works">Works</a></li>
@@ -20,9 +21,12 @@
     </nav>
   </header>
 
-  <section class="hero" data-aos="fade-up">
-    <h1>安部 一也<br><small>Kazuya Abe</small></h1>
-    <img src="assets/sample-hero.jpg" alt="プロフィール画像">
+  <section class="hero" data-aos="fade-in">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>安部 一也</h1>
+      <p>Kazuya Abe - Web Designer / Creator</p>
+    </div>
   </section>
 
   <section id="about" data-aos="fade-up">
@@ -39,15 +43,19 @@
   <section id="works" data-aos="fade-up">
     <h2>Works</h2>
     <div class="gallery">
-      <img src="assets/work1.jpg" alt="work1">
-      <img src="assets/work2.jpg" alt="work2">
+      <div class="work"><img src="assets/work1.jpg" alt="work1"><p>Sample Work 1</p></div>
+      <div class="work"><img src="assets/work2.jpg" alt="work2"><p>Sample Work 2</p></div>
     </div>
   </section>
 
   <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>SNSや連絡先などをここに掲載</p>
+    <p>お気軽にお問い合わせください。SNSやメールなどの情報をここに掲載可能です。</p>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Kazuya Abe</p>
+  </footer>
 
   <script src="libs/aos/aos.js"></script>
   <script src="script.js"></script>
