@@ -9,7 +9,7 @@ body {
   margin: 0;
   color: #111;
   background: #fdfdfd;
-  overflow-x: hidden; /* 横スクロール防止 */
+  overflow-x: hidden;
 }
 
 /* ヘッダーとナビゲーション */
@@ -20,7 +20,7 @@ header {
   z-index: 999;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   overflow-x: hidden;
-  overflow-y: visible; /* 追加 */
+  overflow-y: visible;
 }
 
 nav {
@@ -31,7 +31,7 @@ nav {
   position: relative;
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: visible; /* 追加 */
+  overflow-y: visible;
   min-height: 60px;
 }
 
@@ -45,9 +45,9 @@ nav ul {
   gap: 20px;
   list-style: none;
   margin: 0;
-  padding: 4px 12px; /* 枠線内の余白調整 */
+  padding: 4px 12px;
   overflow-x: hidden;
-  overflow-y: hidden; /* 縦スクロール消す */
+  overflow-y: hidden;
   background: white;
   box-sizing: border-box;
 }
@@ -57,25 +57,26 @@ nav a {
   color: #333;
   padding: 8px 16px;
   position: relative;
-  border: 2px solid transparent; /* リンク単体の枠線準備 */
+  border: 2px solid transparent;
   border-radius: 6px;
   transition: border-color 0.3s, background-color 0.3s;
 }
 
-/* アクティブなリンクは枠線と背景を強調 */
 nav a.active {
   font-weight: bold;
   border-color: #111;
   background-color: #eee;
 }
 
-/* 以前のアンダーラインは非表示に */
 #active-line {
   display: none;
 }
 
 /* ヒーローセクション（泡の背景） */
 .hero {
+  width: 100vw;         /* ← 横幅いっぱいに */
+  max-width: none;      /* ← 制限解除 */
+  margin: 0;            /* ← 中央寄せ解除 */
   height: 80vh;
   background: #111;
   color: white;
@@ -84,7 +85,6 @@ nav a.active {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 100%;
 }
 
 canvas#bubbles {
@@ -233,5 +233,3 @@ iframe, img, video {
 h1 {
   font-size: 2em;
 }
-
-
