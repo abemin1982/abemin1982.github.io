@@ -1,8 +1,12 @@
 const canvas = document.getElementById('bubbles');
 const ctx = canvas.getContext('2d');
 let bubbles = [];
-canvas.width = window.innerWidth;
-canvas.height = document.querySelector('.hero').offsetHeight;
+
+function resizeCanvas() {
+  const hero = document.querySelector('.hero');
+  canvas.width = hero.clientWidth;
+  canvas.height = hero.clientHeight;
+}
 
 function Bubble() {
   this.x = Math.random() * canvas.width;
@@ -11,6 +15,7 @@ function Bubble() {
   this.speed = Math.random() * 1 + 0.5;
   this.alpha = Math.random() * 0.5 + 0.3;
 }
+
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   bubbles.forEach(b => {
@@ -25,7 +30,14 @@ function draw() {
   });
   requestAnimationFrame(draw);
 }
+
+resizeCanvas();
+
 for (let i = 0; i < 100; i++) {
   bubbles.push(new Bubble());
 }
 draw();
+
+window.addEventListener('resize', () => {
+  resizeCanvas();
+});
