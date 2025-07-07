@@ -90,7 +90,7 @@ canvas#bubbles {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;     /* 横幅フルブラウザ */
   height: 100%;
   max-width: 100%;
   display: block;

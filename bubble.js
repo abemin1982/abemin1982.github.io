@@ -4,8 +4,8 @@ let bubbles = [];
 
 function resizeCanvas() {
   const hero = document.querySelector('.hero');
-  canvas.width = hero.clientWidth;
-  canvas.height = hero.clientHeight;
+  canvas.width = window.innerWidth;  // ← ブラウザの横幅いっぱいにする
+  canvas.height = hero.clientHeight; // ヒーローの高さに合わせる
 }
 
 function Bubble() {
