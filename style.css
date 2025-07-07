@@ -39,35 +39,41 @@ nav .logo {
   font-weight: bold;
 }
 
+/* ナビメニュー全体を囲む枠線 */
 nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 4px 12px; /* 枠線内の余白調整 */
+  border: 2px solid #111;  /* 枠線 */
+  border-radius: 8px;
   overflow-x: hidden;
-  overflow-y: visible; /* 追加 */
+  overflow-y: hidden; /* 縦スクロール消す */
+  background: white;
+  box-sizing: border-box;
 }
 
 nav a {
   text-decoration: none;
   color: #333;
-  padding: 4px 8px;
+  padding: 8px 16px;
   position: relative;
+  border: 2px solid transparent; /* リンク単体の枠線準備 */
+  border-radius: 6px;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
+/* アクティブなリンクは枠線と背景を強調 */
 nav a.active {
   font-weight: bold;
+  border-color: #111;
+  background-color: #eee;
 }
 
+/* 以前のアンダーラインは非表示に */
 #active-line {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background: #111;
-  transition: 0.3s ease;
-  top: auto; /* topはJSで制御 */
+  display: none;
 }
 
 /* ヒーローセクション（泡の背景） */
@@ -178,4 +184,49 @@ footer {
   background: #111;
   color: white;
   text-decoration: none;
-  border-radi
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #444;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    gap: 12px;
+    padding: 4px 8px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .gallery {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .work {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  section {
+    padding: 80px 10px 40px;
+    max-width: 100%;
+  }
+}
+
+/* メディア要素の共通スタイル（横はみ出し防止） */
+iframe, img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
