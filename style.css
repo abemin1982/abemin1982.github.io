@@ -67,6 +67,7 @@ nav a.active {
   width: 0;
   background: #111;
   transition: 0.3s ease;
+  top: 100%;  /* ここを追加します */
 }
 
 /* ヒーローセクション（泡の背景） */

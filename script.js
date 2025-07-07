@@ -23,8 +23,12 @@ function updateNav() {
       link.classList.add("active");
 
       const rect = link.getBoundingClientRect();
+      const navRect = link.closest("nav").getBoundingClientRect();
+
       activeLine.style.left = link.offsetLeft + "px";
       activeLine.style.width = rect.width + "px";
+      activeLine.style.top = navRect.height + "px";   // ここ追加！縦位置固定
+      activeLine.style.position = "absolute";          // 念のため絶対指定
     } else {
       link.classList.remove("active");
     }
@@ -34,3 +38,4 @@ function updateNav() {
 updateNav();
 window.addEventListener("scroll", updateNav);
 window.addEventListener("load", updateNav);
+window.addEventListener("resize", updateNav);  // リサイズ時にも更新すると安定
