@@ -1,35 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ポートフォリオ</title>
+  <title>安部 一也 | Web Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="libs/aos/aos.css" />
 </head>
 <body>
-  <div id="loading">Loading...</div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav id="nav">
-    <ul>
-      <li><a href="#about">自己紹介</a></li>
-      <li><a href="#works">作品</a></li>
-      <li><a href="#contact">連絡先</a></li>
-    </ul>
-  </nav>
-
-  <section id="about" class="fade-in">こんにちは！私はWeb制作者の安部一也です。</section>
-  <section id="works" class="fade-in">
-    <h2>制作実績</h2>
-    <p>ここにポートフォリオのサムネイルや紹介を並べましょう。</p>
-  </section>
-  <section id="contact" class="fade-in">
-    <h2>お問い合わせ</h2>
-    <p>abemin1982@example.com</p>
+  <section class="hero" data-aos="fade-up">
+    <h1>安部 一也<br><small>Kazuya Abe</small></h1>
+    <img src="assets/sample-hero.jpg" alt="プロフィール画像">
   </section>
 
-  <div id="to-top">↑</div>
+  <section id="about" data-aos="fade-up">
+    <h2>About</h2>
+    <p>
+      初めまして、ご覧いただきありがとうございます。安部と申します。<br>
+      20代からWEBデザインの勉強をし、cssがまだ指定して呼び出せない頃から、現在主流のhtml5まで携わってきました。<br>
+      主にphotoshopでサムネイルやバナー、その他画像制作を行い、illustrator等で名刺～ポスターまで幅広くデザインが可能です。<br>
+      コーディングも可能、JavaScript等はAIと共に作業効率をあげて構築ができます。<br>
+      少々WEBデザインから離れ、ECサイトの運営、主に商品の在庫管理等をメインに活動してました。
+    </p>
+  </section>
 
-  <script src="main.js"></script>
+  <section id="works" data-aos="fade-up">
+    <h2>Works</h2>
+    <div class="gallery">
+      <img src="assets/work1.jpg" alt="work1">
+      <img src="assets/work2.jpg" alt="work2">
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>SNSや連絡先などをここに掲載</p>
+  </section>
+
+  <script src="libs/aos/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
