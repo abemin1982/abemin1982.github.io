@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -6,6 +10,60 @@ body {
   overflow-x: hidden; /* 横スクロール防止 */
 }
 
+/* ヘッダーとナビゲーション */
+header {
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+nav .logo {
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 4px 8px;
+  position: relative;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+#active-line {
+  position: absolute;
+  bottom: 10px;
+  height: 2px;
+  width: 0;
+  background: #111;
+  transition: 0.3s ease;
+}
+
+/* ヒーローセクション（泡の背景） */
 .hero {
   height: 80vh;
   background: #111;
@@ -29,6 +87,22 @@ canvas#bubbles {
   pointer-events: none;
 }
 
+.hero-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* 共通セクション */
+section {
+  padding: 100px 20px 60px;
+  max-width: 900px;
+  margin: auto;
+  scroll-margin-top: 100px;
+  box-sizing: border-box;
+}
+
+/* Works ギャラリー */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -53,19 +127,62 @@ canvas#bubbles {
   height: auto;
 }
 
-iframe, img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.work:hover img {
+  transform: scale(1.05);
 }
 
-section, .detail, .gallery, .work {
+/* お問い合わせフォーム */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
+.contact-form button {
+  padding: 10px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #111;
+  color: white;
+}
+
+/* 戻るボタン */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #444;
+}
+
+/* レスポンシブ対応 */
 @media (max-width: 600px) {
   nav {
-    padding: 15px 10px;
+    padding: 10px 15px;
   }
 
   nav ul {
@@ -86,4 +203,11 @@ section, .detail, .gallery, .work {
     padding: 80px 10px 40px;
     max-width: 100%;
   }
+}
+
+/* メディア要素の共通スタイル（横はみ出し防止） */
+iframe, img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
