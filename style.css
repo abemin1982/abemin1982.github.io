@@ -1,51 +1,11 @@
-html {
-  scroll-behavior: smooth;
-}
 body {
   font-family: sans-serif;
   margin: 0;
   color: #111;
   background: #fdfdfd;
+  overflow-x: hidden; /* 横スクロール防止 */
 }
-header {
-  position: fixed;
-  width: 100%;
-  background: white;
-  z-index: 999;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: relative;
-}
-nav .logo {
-  font-weight: bold;
-}
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-nav a {
-  text-decoration: none;
-  color: #333;
-  padding: 4px 8px;
-  position: relative;
-}
-nav a.active {
-  font-weight: bold;
-}
-#active-line {
-  position: absolute;
-  bottom: 10px;
-  height: 2px;
-  width: 0;
-  background: #111;
-  transition: 0.3s ease;
-}
+
 .hero {
   height: 80vh;
   background: #111;
@@ -56,136 +16,41 @@ nav a.active {
   align-items: center;
   overflow: hidden;
 }
+
 canvas#bubbles {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  display: block;
   z-index: 0;
+  pointer-events: none;
 }
-.hero-text {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-section {
-  padding: 100px 20px 60px;
-  max-width: 900px;
-  margin: auto;
-  scroll-margin-top: 100px;
-}
+
 .gallery {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
-}
-.work {
-  flex: 1 1 300px;
-}
-.work img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-.work:hover img {
-  transform: scale(1.05);
-}
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-.contact-form button {
-  padding: 10px;
-  background: #111;
-  color: white;
-  border: none;
-  border-radius: 6px;
-}
-footer {
-  text-align: center;
-  padding: 40px;
-  background: #111;
-  color: white;
-}
-.back-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-  background: #111;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-.back-btn:hover {
-  background: #444;
-}
-
-@media (max-width: 600px) {
-  .gallery {
-    gap: 10px;
-    padding: 0 10px;
-  }
-  .work {
-    flex: 1 1 100%; /* 幅100%にしてはみ出し防止 */
-    max-width: 100%;
-  }
-  section {
-    padding: 80px 10px 40px; /* 画面に合わせて余白調整 */
-    max-width: 100%;
-  }
-  nav {
-    padding: 15px 20px;
-  }
-  nav ul {
-    gap: 12px;
-  }
-}
-
-body {
-  overflow-x: hidden;
-}
-
-.gallery {
+  gap: 20px;
   padding: 0 10px;
   box-sizing: border-box;
 }
 
 .work {
-  box-sizing: border-box;
+  flex: 1 1 300px;
   padding: 0 5px;
+  box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
-  nav {
-    padding: 15px 10px;
-  }
-  .gallery {
-    gap: 10px;
-    padding: 0 10px;
-  }
-  .work {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-  section {
-    padding: 80px 10px 40px;
-    max-width: 100%;
-  }
-}
-
-body {
-  overflow-x: hidden;
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 iframe, img, video {
@@ -196,4 +61,29 @@ iframe, img, video {
 
 section, .detail, .gallery, .work {
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 15px 10px;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  .gallery {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .work {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  section {
+    padding: 80px 10px 40px;
+    max-width: 100%;
+  }
 }
