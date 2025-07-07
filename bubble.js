@@ -22,7 +22,7 @@ function draw() {
   bubbles.forEach(b => {
     ctx.beginPath();
     ctx.arc(b.x, b.y, b.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255,255,255,${b.alpha})`;
+    ctx.fillStyle = `rgba(180,180,180,${b.alpha})`;
     ctx.fill();
 
     if (b.direction === "up") {
