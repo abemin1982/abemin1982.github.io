@@ -2,11 +2,7 @@ AOS.init({ duration: 1000, once: true });
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
-
-// 動く枠要素を追加
-let activeBox = document.createElement("div");
-activeBox.id = "active-box";
-document.querySelector("nav ul").appendChild(activeBox);
+const activeLine = document.getElementById("active-line");
 
 function updateNav() {
   let current = "";
@@ -27,13 +23,12 @@ function updateNav() {
       link.classList.add("active");
 
       const rect = link.getBoundingClientRect();
-      const navRect = link.closest("nav ul").getBoundingClientRect();
+      const navRect = link.closest("nav").getBoundingClientRect();
 
-      activeBox.style.left = `${rect.left - navRect.left}px`;
-      activeBox.style.top = `${rect.top - navRect.top}px`;
-      activeBox.style.width = `${rect.width}px`;
-      activeBox.style.height = `${rect.height}px`;
-      activeBox.style.opacity = "1";
+      activeLine.style.left = link.offsetLeft + "px";
+      activeLine.style.width = rect.width + "px";
+      activeLine.style.top = navRect.height + "px";   // 縦位置はnavの高さに合わせる
+      activeLine.style.position = "absolute";          // 念のため絶対指定
     } else {
       link.classList.remove("active");
     }
