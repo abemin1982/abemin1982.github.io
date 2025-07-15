@@ -233,3 +233,27 @@ iframe, img, video {
 h1 {
   font-size: 2em;
 }
+
+
+
+body.career-page section#career {
+  padding: 100px 20px 60px;
+  max-width: 900px;
+  margin: auto;
+  scroll-margin-top: 100px;
+  box-sizing: border-box;
+}
+
+.career-section {
+  margin-bottom: 40px;
+}
+
+.career-section h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.career-section p {
+  line-height: 1.6;
+}
+

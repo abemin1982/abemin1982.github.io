@@ -1,100 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>職務経歴書</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .locked {
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    input {
-      padding: 8px;
-      font-size: 16px;
-    }
-    button {
-      margin-top: 10px;
-      padding: 8px 16px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>職務経歴書 | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
-<div id="lockScreen" class="locked">
-  <h2>🔒 パスワードを入力してください</h2>
-  <input type="password" id="passwordInput" placeholder="パスワード">
-  <button onclick="unlock()">開く</button>
-  <p id="message" style="color: red;"></p>
-</div>
-
-<div id="content" style="display: none;">
+<body class="career-page">
   <header>
     <nav>
-      <div class="logo">abemin1982</div>
+      <div class="logo">My Portfolio</div>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="career.html" class="active">職務経歴書</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#works">Works</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main style="margin-top: 100px;">
-    <section>
-      <h1>職務経歴書</h1>
-      <h2>株式会社○○（2019年〜2024年）</h2>
-      <ul>
-        <li>Webデザインとコーディング（HTML, CSS, JavaScript）</li>
-        <li>ポートフォリオサイトの制作</li>
-        <li>GitHubでのソース管理</li>
-      </ul>
-      <h2>株式会社△△（2015年〜2019年）</h2>
-      <ul>
-        <li>UI設計とディレクション業務</li>
-        <li>クライアント対応・要件定義</li>
-      </ul>
-      <h2>株式会社△△（2015年〜2019年）</h2>
-      <ul>
-        <li>UI設計とディレクション業務</li>
-        <li>クライアント対応・要件定義</li>
-      </ul>
-      <h2>株式会社△△（2015年〜2019年）</h2>
-      <ul>
-        <li>UI設計とディレクション業務</li>
-        <li>クライアント対応・要件定義</li>
-      </ul>
-      <h2>株式会社△△（2015年〜2019年）</h2>
-      <ul>
-        <li>UI設計とディレクション業務</li>
-        <li>クライアント対応・要件定義</li>
-      </ul>
-    </section>
-  </main>
+  <section id="career">
+    <h1>職務経歴書</h1>
+
+    <div class="career-section">
+      <h2>株式会社ABC（2018年〜2021年）</h2>
+      <p>Webディレクターとして、コーポレートサイトの企画・進行・運用を担当。クライアント対応、ワイヤーフレーム作成、進行管理、納品までを一貫して対応。</p>
+    </div>
+
+    <div class="career-section">
+      <h2>株式会社XYZ（2021年〜2023年）</h2>
+      <p>UI/UXデザイナーとして、LPやECサイトの改善・新規構築に従事。Shopify・WordPressを用いた実装支援、ABテストやGA分析まで幅広く経験。</p>
+    </div>
+
+    <div class="career-section">
+      <h2>フリーランス（2023年〜現在）</h2>
+      <p>デザインから実装、ディレクションまでワンストップで対応。名刺・ロゴ・Web制作の受託案件を中心に活動中。</p>
+    </div>
+
+    <a href="index.html" class="back-btn">← ポートフォリオに戻る</a>
+  </section>
 
   <footer>
-    <p>&copy; 2025 abemin1982</p>
+    <p>&copy; 2025 Your Name</p>
   </footer>
-</div>
-
-<script>
-  const correctPassword = "abemin1982";  // ← 好きなパスワードに変更OK
-
-  function unlock() {
-    const input = document.getElementById("passwordInput").value;
-    const message = document.getElementById("message");
-
-    if (input === correctPassword) {
-      document.getElementById("lockScreen").style.display = "none";
-      document.getElementById("content").style.display = "block";
-    } else {
-      message.textContent = "パスワードが違います。";
-    }
-  }
-</script>
-
 </body>
 </html>
